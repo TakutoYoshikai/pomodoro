@@ -1,6 +1,6 @@
 
 const Pomodoro = function(workTimeMs, breakTimeMs, callbacks) {
-  const timer1, timer2;
+  let timer1, timer2;
   this.start = function() {
     this.stop();
     timer1 = setInterval(() => {
