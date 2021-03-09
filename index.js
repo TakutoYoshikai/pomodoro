@@ -6,7 +6,7 @@ const Pomodoro = function(workTimeMs, breakTimeMs, callbacks) {
     timer1 = setInterval(() => {
       callbacks.work();
       timer2 = setTimeout(() => {
-        callback.takeBreak();
+        callbacks.takeBreak();
       }, breakTimeMs);
     }, workTimeMs);
   }
