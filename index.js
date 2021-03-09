@@ -1,10 +1,19 @@
-function start() {
-  setInterval(() => {
-    console.log("work!");
-    setTimeout(() => {
-      console.log("take a break!");
-    }, 25 * 60 * 1000);
-  }, 30 * 60 * 1000);
+
+const Pomodoro = function(workTimeMs, breakTimeMs, callbacks) {
+  const timer1, timer2;
+  this.start = function() {
+    this.stop();
+    timer1 = setInterval(() => {
+      callbacks.work();
+      timer2 = setTimeout(() => {
+        callback.takeBreak();
+      }, breakTimeMs);
+    }, workTimeMs);
+  }
+  this.stop = function() {
+    clearInterval(timer1);
+    clearTimeout(timer2);
+  }
 }
 
-start();
+module.exports = Pomodoro;
