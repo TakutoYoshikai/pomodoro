@@ -1,5 +1,5 @@
 # pomodoro
-The pomodoro program.
+The pomodoro library.
 
 ### Usage
 **install**
